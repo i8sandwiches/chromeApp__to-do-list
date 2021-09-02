@@ -1,9 +1,15 @@
 .cursor {
   transform: translate(-50%, -50%);
+  transform-origin: -50% -50%;
   position: fixed;
   width: 50px;
   height: 50px;
   background-color: white;
   border-radius: 50%;
   display: none;
+  transition: background, transform 0.3s ease-in-out;
+  cursor: none;
+}
+.small-cursor {
+  transform: scale(0.5);
 }

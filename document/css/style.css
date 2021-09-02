@@ -8,6 +8,7 @@ a {
   text-decoration: none;
 }
 * {
+  cursor: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,7 +45,7 @@ body {
   top: 60px;
   position: fixed;
 }
-.nav-bar h1 {
+.nav-bar h1 a {
   font-size: 30px;
   font-weight: 600;
 }
@@ -62,7 +63,6 @@ body {
 }
 .log-in form input:first-child {
   z-index: 1;
-  cursor: pointer;
   color: black;
   font-size: 50px;
   margin-bottom: 60px;
