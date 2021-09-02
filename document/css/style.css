@@ -69,7 +69,7 @@ body {
   height: 100px;
   position: fixed;
   font-size: 23px;
-  color: rgb(10, 138, 146);
+  color: #479da1;
 }
 .button__inner {
   z-index: 0;
