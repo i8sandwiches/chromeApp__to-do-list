@@ -7,6 +7,7 @@ const GET_SMALL="small-cursor";
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor);
 
+
 //mouse effect
 function cursor(e) {
     mosueCursor.style.left = e.pageX + "px";
