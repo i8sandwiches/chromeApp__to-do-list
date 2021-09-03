@@ -11,7 +11,7 @@ window.addEventListener("mouseover", activeCursor);
 function cursor(e) {
     mosueCursor.style.left = e.pageX + "px";
     mosueCursor.style.top = e.pageY + "px";
-    mosueCursor.style.display = "block"
+    mosueCursor.style.display = "block";
 }
 
 function activeCursor(e) {

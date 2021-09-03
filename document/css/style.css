@@ -16,9 +16,7 @@ a {
 input:focus {
   outline: none;
 }
-.disappear {
-  display: none;
-}
+
 body {
   flex-direction: column;
   height: 100vh;
@@ -41,7 +39,7 @@ body {
   background-color: rgb(20, 148, 156);
 }
 .nav-bar {
-  z-index: 1;
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -58,22 +56,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-.log-in form button {
+.log-in form i {
+  z-index: 5;
   background-color: rgba(95, 158, 160, 0);
-  z-index: 1;
   border-radius: 50%;
   border: none;
-  width: 100px;
-  height: 100px;
   position: fixed;
   font-size: 23px;
   color: #479da1;
+  padding: 20px;
 }
+
 .button__inner {
   z-index: 0;
-  background-color: #1f4749;
+  background-color: #206466;
   width: 100px;
   height: 100px;
   border-radius: 50px;
@@ -81,6 +78,7 @@ body {
 }
 /*---------------------------------------------------------------*/
 .main-screen {
+  z-index: 50;
   position: fixed;
   background-color: rgb(20, 148, 156);
   transform: scale(102);

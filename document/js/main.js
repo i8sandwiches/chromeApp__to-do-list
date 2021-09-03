@@ -2,12 +2,11 @@ const getMainScreen = document.querySelector(".get__main-screen");
 const buttonInner = document.querySelector(".button__inner");
 
 const MAIN_SCREEN="main-screen";
-const DISAPPEAR="disappear"
 
-getMainScreen.addEventListener("click", mainScreenToggle);
+getMainScreen.addEventListener("click", mainScreenAppear);
 
-//mainscreen effect
-function mainScreenToggle() {
+function mainScreenAppear() {
     buttonInner.classList.add(MAIN_SCREEN);
-    getMainScreen.classList.add(DISAPPEAR);
+    mosueCursor.setAttribute("style", "z-index: 51;");
 }
+
