@@ -202,14 +202,22 @@ body {
 /*-----------------------------------------------------------*/
 .underbar {
   padding-bottom: 5px;
-  background: linear-gradient(currentColor 0 0) var(--z, 0) 100% / var(--x, 0)
-    3.6px no-repeat;
+
+  /*verson 1*/
+  /* background: linear-gradient(currentColor 0 0) var(--x, 0) 100% / var(--x, 0)
+    3.6px no-repeat; */
+
+  /*version 2*/
+  background: linear-gradient(currentColor 0 0) /*******background-color*******/
+    50% 100% / var(--x, 0) 4px /*   =>   var(after,before)*/
+    /****background-position(  left  ||  top  )background-size(  width  ||  height  )****/
+    no-repeat; /*only one background*/
+
   transition: all 0.3s, background-position 0s 0.3s, color 0.7s ease-in-out;
   color: #72a586;
   font-size: 45px;
   font-weight: 500;
 }
 .underbar:hover {
-  --z: 100%;
   --x: 100%;
 }
