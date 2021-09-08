@@ -21,13 +21,14 @@ function addTodo(event) {
    
    //create button ✔ for check
    const completeButton = document.createElement("button");
-   completeButton.innerHTML= "✔";
+   completeButton.innerText= "✔";
+   //completeButton.innerHTML= "<i>✔</i>";
    completeButton.classList.add("complete-btn");
    todoDiv.appendChild(completeButton);
 
    //create button ✖ for remove
    const trashButton = document.createElement("button");
-   trashButton.innerHTML= "✖";
+   trashButton.innerText= "✖";
    trashButton.classList.add("trash-btn");
    todoDiv.appendChild(trashButton);
    
@@ -47,7 +48,7 @@ function deleteCheck(e) {
         todo.remove();
     }
 
-    //remove .todo when you click  ✔
+    //little bit transparent .todo when you click  ✔
     if(item.classList[0]==="complete-btn") {
         const todo = item.parentElement;
         todo.classList.toggle("completed");
