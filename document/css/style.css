@@ -57,14 +57,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.hidden {
-  color: rgba(0, 0, 0, 0);
-  width: 0vh;
-  height: 0vh;
-  opacity: 0;
-  transition: all 800ms ease-in-out, opacity 300ms ease-in-out;
-  pointer-events: none;
-}
+
 /*------------------------------------------------*/
 .vertical-line {
   position: absolute;
@@ -113,29 +106,50 @@ body {
 .right-container {
   width: 50%;
   height: 100%;
+  position: relative;
 }
 .right-container__to-do-list {
   width: 100%;
-  height: 100%;
+  height: 70%;
   display: flex;
   align-items: center;
   flex-direction: column;
   font-size: 50px;
   position: relative;
+  top: 30%;
 }
-.right-container__to-do-list header {
-  margin-top: 150px;
+.right-container header {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  opacity: 1;
 }
 .todo__button,
 .todo__input {
   border: none;
   border-bottom: 1px solid #8ac9a2;
-  background-color: #131313;
+  background-color: rgba(0, 0, 0, 0);
   color: #8ac9a2;
 }
 
 .todo__button {
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  background-color: #8ac9a2;
+}
+.todo__button i {
+  color: #131313;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .todo-list {
   font-size: 20px;
@@ -145,27 +159,41 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 300px;
+  height: 20px;
   margin-top: 20px;
   position: relative;
 }
 .complete-btn {
-  background-color: #131313;
+  position: absolute;
+  left: -50px;
+  background-color: rgba(0, 0, 0, 0);
   color: #72a586;
   border: none;
-  border-left: 2px solid rgba(114, 165, 134, 0.5);
   cursor: pointer;
   margin-right: 5px;
+  font-size: 25px;
 }
 .trash-btn {
   position: absolute;
   right: -25px;
-  background-color: #131313;
+  background-color: rgba(0, 0, 0, 0);
   color: #72a586;
   border: none;
   cursor: pointer;
-  margin-right: 5px;
+  font-size: 25px;
 }
-.completed {
-  opacity: 0.25;
+.todo-list__container {
+  margin-top: 40px;
 }
 /*------------------------------------------------*/
+.hidden {
+  color: rgba(0, 0, 0, 0);
+  width: 0vh;
+  height: 0vh;
+  opacity: 0;
+  transition: all 800ms ease-in-out, opacity 300ms ease-in-out;
+  pointer-events: none;
+}
+.none {
+  display: none;
+}
