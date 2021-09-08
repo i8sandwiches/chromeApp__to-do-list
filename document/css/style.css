@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 @import "reset.css";
-@import "animation.css";
 
 body {
   font-family: "Poppins", sans-serif;
@@ -14,12 +13,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-#logo {
-  font-size: 45px;
-  font-weight: 500;
-  color: #8ac9a2;
-  transition: color 0.5s ease-in-out;
 }
 .button {
   z-index: -1;
@@ -83,6 +76,7 @@ body {
   height: 100%;
 }
 .left-container__clock {
+  pointer-events: none;
   width: 100%;
   height: 50%;
   font-size: 50px;
@@ -91,6 +85,7 @@ body {
   align-items: center;
 }
 .left-container__weather {
+  pointer-events: none;
   width: 100%;
   height: 50%;
   display: flex;
@@ -119,6 +114,7 @@ body {
   top: 30%;
 }
 .right-container header {
+  pointer-events: none;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -133,7 +129,10 @@ body {
   background-color: rgba(0, 0, 0, 0);
   color: #8ac9a2;
 }
-
+.todo__input::placeholder {
+  text-align: center;
+  color: rgba(138, 201, 162, 1);
+}
 .todo__button {
   width: 30px;
   height: 30px;
@@ -142,7 +141,7 @@ body {
   border: none;
   border-radius: 50%;
   position: relative;
-  background-color: #8ac9a2;
+  background-color: #72a586;
 }
 .todo__button i {
   color: #131313;
@@ -185,6 +184,9 @@ body {
 .todo-list__container {
   margin-top: 40px;
 }
+.completed {
+  opacity: 0.3;
+}
 /*------------------------------------------------*/
 .hidden {
   color: rgba(0, 0, 0, 0);
@@ -196,4 +198,18 @@ body {
 }
 .none {
   display: none;
+}
+/*-----------------------------------------------------------*/
+.underbar {
+  padding-bottom: 5px;
+  background: linear-gradient(currentColor 0 0) var(--z, 0) 100% / var(--x, 0)
+    3.6px no-repeat;
+  transition: all 0.3s, background-position 0s 0.3s, color 0.7s ease-in-out;
+  color: #72a586;
+  font-size: 45px;
+  font-weight: 500;
+}
+.underbar:hover {
+  --z: 100%;
+  --x: 100%;
 }
